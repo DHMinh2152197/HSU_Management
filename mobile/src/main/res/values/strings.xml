@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">HSU_Management</string>
+    <string name="edt_userName">Tên đăng nhập (VD: minh.dh2197)</string>
+    <string name="edt_password">Mật khẩu</string>
+    <string name="chbox_saveInformation">Ghi nhớ</string>
+    <string name="btn_signin">Đăng nhập</string>
+    <string name="btn_signup">Đăng ký</string>
+    <string name="txt_getPassWord">Quên mật khẩu ?</string>
+    <string name="txt_greeting">"Xin chào "</string>
+    <string name="txt_userName">MINH</string>
+</resources>
