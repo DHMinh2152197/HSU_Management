@@ -42,26 +42,167 @@
                 android:text="Về chúng tôi"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="18sp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ABCXYZ" />
+                android:text="Ứng dụng Hệ thống thông tin sinh viên di động là phiên bản thử nghiệm với một số chức năng cơ bản như: Thời khóa biểu, Xem điểm, Lịch thi, Chuyên cần, Điểm danh trực tuyến, Thông báo, Học phí, Tài khoản photo. Nhằm hỗ trợ SINH VIÊN đang theo học tại trường.\n\nỨng dụng luôn cập nhật các thông tin mới nhất cho từng cá nhân tham gia sử dụng ứng dụng." />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:text="Thông tin liên hệ"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Chính sách bảo mật"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="18sp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ABCXYZ" />
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:text="Thu thập thông tin gì khi sử dụng ?"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- Chúng tôi thu thập thông tin biểu mẫu khi bạn thực hiện chức năng đánh giá.\n\n- Các thông tin được thu thập bao gồm: Tên thiết bị, hệ điều hành, kích cỡ màn hình, vị trí." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Thu thập thông tin để làm gì ?"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bất kỳ thông tin chúng tôi thu thập đều được sử dụng vào các mục đích sau đây:\n\n- Cá nhân hóa trải nghiệm của người dùng.\n\n- Cải thiện chức năng ứng dụng." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Điều cần biết"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Khi sử dụng ứng dụng đồng nghĩa với việc bạn chấp nhận các chính sách riêng của chúng tôi." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Thay đổi chính sách"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nếu có bất kỳ thay đổi về chính sách, chúng tôi sẽ cập nhật tại trang này." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Thông tin liên hệ"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phòng Công nghệ thông tin,\nĐại học Hoa Sen"
+                android:textStyle="bold"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Địa chỉ : " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email : " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Website : " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Điện thoại : " />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="08 Nguyễn Văn Tráng, P. Bến Thành, Q.1, Tp.HCM"
+                        android:autoLink="map"
+                        android:linksClickable="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ITSupport@hoasen.edu.vn"
+                        android:autoLink="email"
+                        android:linksClickable="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="https://www.hoasen.edu.vn/"
+                        android:autoLink="web"
+                        android:linksClickable="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="028 7309 1991 (EXT. 11261)"
+                        android:autoLink="phone"
+                        android:linksClickable="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="wrap_content"
@@ -71,13 +212,59 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ABCÁDFFGHFDGHDSFGDSFGSGDHFGHFGFGHFGHFGHFGHSHSHFGSHSFGHGFSHGHGSHSHSDHSDFHXYZ"
+                android:text="Theo dõi các thông tin cập nhật mới nhất tại:"
                 android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fanpage : "/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Website : "/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="https://www.facebook.com/HoaSenUni/"
+                        android:autoLink="web"
+                        android:linksClickable="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="https://www.hoasen.edu.vn/"
+                        android:autoLink="web"
+                        android:linksClickable="true"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="5dp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
                 android:background="@color/colorPrimary" />
 
         </LinearLayout>

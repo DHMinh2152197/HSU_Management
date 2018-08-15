@@ -114,6 +114,8 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:padding="9dp"
+                android:autoLink="web"
+                android:linksClickable="true"
                 android:text="@string/txt_getPassWord"
                 android:textColor="@color/white" />
 

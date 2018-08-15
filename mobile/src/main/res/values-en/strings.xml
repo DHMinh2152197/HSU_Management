@@ -8,4 +8,5 @@
     <string name="btn_signin">Log in</string>
     <string name="txt_greeting">"Hello "</string>
     <string name="txt_userName">MINH</string>
+    <string name="app_name">HSU_Management</string>
 </resources>
