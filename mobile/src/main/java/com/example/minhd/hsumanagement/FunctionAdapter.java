@@ -43,43 +43,43 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
             public void onClick(View view, int position, boolean isLongClick) {
                 Intent intent = null;
                 if (isLongClick) {
-                    Toast.makeText(context, " " + dataFunctions.get(position).getMfunctionName() + "" + dataFunctions.get(position).getMfunctionImage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, " " + dataFunctions.get(position).getMfunctionName() + " id: " + dataFunctions.get(position).getMfunctionImage(), Toast.LENGTH_SHORT).show();
                 } else {
-                    switch (dataFunctions.get(position).getMfunctionImage()) {
-                        case 2131099756: //id hình ảnh chức năng TKB
+                    switch (dataFunctions.get(position).getMfunctionName()) {
+                        case "Thời khóa biểu": //id hình ảnh chức năng TKB
                             intent = new Intent(context, ScheduleActivity.class);
                             break;
-                        case 2131099760: //id hình ảnh chức năng Xem điểm
+                        case "Xem điểm": //id hình ảnh chức năng Xem điểm
                             intent = new Intent(context, ScoreActivity.class);
                             break;
-                        case 2131099757: //id hình ảnh chức năng Chuyên cần
+                        case "Chuyên cần": //id hình ảnh chức năng Chuyên cần
                             intent = new Intent(context, AttendanceActivity.class);
                             break;
-                        case 2131099770: //id hình ảnh chức năng Lịch thi
+                        case "Lịch thi": //id hình ảnh chức năng Lịch thi
                             intent = new Intent(context, ExamDateActivity.class);
                             break;
-                        case 2131099769: //id hình ảnh chức năng Điểm danh
+                        case "Điểm danh": //id hình ảnh chức năng Điểm danh
                             intent = new Intent(context, CheckAttendanceActivity.class);
                             break;
-                        case 2131099765: //id hình ảnh chức năng Học phí
+                        case "Học phí": //id hình ảnh chức năng Học phí
                             intent = new Intent(context, TuitionActivity.class);
                             break;
-                        case 2131099755: //id hình ảnh chức năng Thông báo
+                        case "Thông báo": //id hình ảnh chức năng Thông báo
                             intent = new Intent(context, NotificationActivity.class);
                             break;
-                        case 2131099767: //id hình ảnh chức năng Tài khoản photo
+                        case "Tài khoản photo": //id hình ảnh chức năng Tài khoản photo
                             intent = new Intent(context, PhotoAccountActivity.class);
                             break;
-                        case 2131099759: //id hình ảnh chức năng Khảo sát
+                        case "Khảo sát": //id hình ảnh chức năng Khảo sát
                             intent = new Intent(context, FeedbackActivity.class);
                             break;
-                        case 2131099758: //id hình ảnh chức năng Liên hệ
+                        case "Liên hệ": //id hình ảnh chức năng Liên hệ
                             intent = new Intent(context, ContactActivity.class);
                             break;
-                        case 2131099768: //id hình ảnh chức năng Giới thiệu
+                        case "Giới thiệu": //id hình ảnh chức năng Giới thiệu
                             intent = new Intent(context, AboutUsActivity.class);
                             break;
-                        case 2131099764: //id hình ảnh chức năng Thoát
+                        case "Thoát": //id hình ảnh chức năng Thoát
                             intent = new Intent(context, MainActivity.class);
                             break;
                         default:
