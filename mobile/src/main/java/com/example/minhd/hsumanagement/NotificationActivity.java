@@ -1,9 +1,12 @@
 package com.example.minhd.hsumanagement;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,7 +39,16 @@ public class NotificationActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                new readData().execute("http://www.techrum.vn/forums/-/index.rss");
+                new readData().execute("https://vnexpress.net/rss/so-hoa.rss");
+            }
+        });
+
+        lstNotification.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent=new Intent(NotificationActivity.this,WebActivity.class);
+                intent.putExtra("link",dataNotifications.get(position).mLink);
+                startActivity(intent);
             }
         });
 
@@ -55,15 +67,16 @@ public class NotificationActivity extends AppCompatActivity {
             XMLDOMParser parser = new XMLDOMParser();
             Document document = parser.getDocument(s);
             NodeList nodeList = document.getElementsByTagName("item");
-            NodeList nodeListImage = document.getElementsByTagName("content:encoded");
+            NodeList nodeListImage = document.getElementsByTagName("description");
 
             String image = "";
             String title = "";
             String link = "";
+            String date = "";
 
             for (int i = 0; i < nodeList.getLength(); i++) {
 
-                String cData = nodeListImage.item(i).getTextContent();
+                String cData = nodeListImage.item(i+1).getTextContent(); // i+1 boi vi trong rss co 1 the description dau tien khong dung toi
 
                 Pattern p = Pattern.compile("<img[^>]+src\\s*=\\s*['\"]([^'\"]+)['\"][^>]*>");
                 Matcher matcher = p.matcher(cData);
@@ -74,8 +87,9 @@ public class NotificationActivity extends AppCompatActivity {
                 Element element = (Element) nodeList.item(i);
                 title = parser.getValue(element, "title");
                 link = parser.getValue(element, "link");
+                date = parser.getValue(element, "pubDate");
 
-                dataNotifications.add(new DataNotification(title, link, image));
+                dataNotifications.add(new DataNotification(title, link, image, date));
                 notificationAdapter = new NotificationAdapter(NotificationActivity.this, android.R.layout.simple_list_item_1, dataNotifications);
                 lstNotification.setAdapter(notificationAdapter);
             }

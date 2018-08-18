@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -24,19 +25,35 @@ public class NotificationAdapter extends ArrayAdapter<DataNotification> {
         View view = convertView;
         if (view == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
-            view =  inflater.inflate(R.layout.item_notification, null);
+            view = inflater.inflate(R.layout.item_notification, null);
         }
-        DataNotification p = getItem(position);
+        final DataNotification p = getItem(position);
         if (p != null) {
             // Anh xa + Gan gia tri
             TextView txtNotificationTitle = (TextView) view.findViewById(R.id.txt_notificationTitle);
-            ImageView imgNotificationImage=(ImageView)view.findViewById(R.id.img_notificationImage);
+            final ImageView imgNotificationImage = (ImageView) view.findViewById(R.id.img_notificationImage);
+            TextView txtNotificationDate = (TextView) view.findViewById(R.id.txt_notificationDate);
 
             txtNotificationTitle.setText(p.mTitle);
-            Picasso.with(getContext()).load(p.mImage).into(imgNotificationImage);
+            txtNotificationDate.setText(p.mDate);
+            try {
 
+                Picasso.with(getContext()).load(p.mImage).resize(160, 120).into(imgNotificationImage, new Callback() {
+                    @Override
+                    public void onSuccess() {
+
+                    }
+
+                    @Override
+                    public void onError() {
+                        imgNotificationImage.setImageResource(R.drawable.img_logo_hsu_word);
+                    }
+                });
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         return view;
     }
-
 }

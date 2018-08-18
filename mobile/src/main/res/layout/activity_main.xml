@@ -25,7 +25,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="30dp"
                 android:padding="16dp"
-                android:src="@drawable/img_logo_hsu" />
+                android:src="@drawable/img_logo_hsu_white" />
 
             <EditText
                 android:id="@+id/edt_userName"

@@ -13,9 +13,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edtUserName,edtPassword;
+    EditText edtUserName, edtPassword;
     CheckBox chboxSaveInfor;
-    Button btnSignIn,btnSignUp;
+    Button btnSignIn, btnSignUp;
     TextView txtGetPassword;
 
     @Override
@@ -30,48 +30,48 @@ public class MainActivity extends AppCompatActivity {
         setTxtGetPassword();
     }
 
-    private void initializeActivity(){
-        edtUserName=findViewById(R.id.edt_userName);
-        edtPassword=findViewById(R.id.edt_password);
-        chboxSaveInfor=findViewById(R.id.chbox_saveInformation);
-        btnSignIn=findViewById(R.id.btn_signin);
-        btnSignUp=findViewById(R.id.btn_signup);
-        txtGetPassword=findViewById(R.id.txt_getPassWord);
+    private void initializeActivity() {
+        edtUserName = findViewById(R.id.edt_userName);
+        edtPassword = findViewById(R.id.edt_password);
+        chboxSaveInfor = findViewById(R.id.chbox_saveInformation);
+        btnSignIn = findViewById(R.id.btn_signin);
+        btnSignUp = findViewById(R.id.btn_signup);
+        txtGetPassword = findViewById(R.id.txt_getPassWord);
     }
 
-    public void setChboxSaveInfor(){
+    public void setChboxSaveInfor() {
         chboxSaveInfor.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Toast.makeText(MainActivity.this,"Infor Saved",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Infor Saved", Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    public void setBtnSignIn(){
+    public void setBtnSignIn() {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,ControlActivity.class);
+                Intent intent = new Intent(MainActivity.this, ControlActivity.class);
                 startActivity(intent);
             }
         });
     }
 
-    public void setBtnSignUp(){
+    public void setBtnSignUp() {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Sign up Clicked",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Sign up Clicked", Toast.LENGTH_LONG).show();
             }
         });
     }
 
-    public void setTxtGetPassword(){
+    public void setTxtGetPassword() {
         txtGetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Forgot Password Clicked",Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Forgot Password Clicked", Toast.LENGTH_LONG).show();
             }
         });
     }

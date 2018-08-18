@@ -43,7 +43,7 @@ public class FunctionAdapter extends RecyclerView.Adapter<FunctionAdapter.ViewHo
             public void onClick(View view, int position, boolean isLongClick) {
                 Intent intent = null;
                 if (isLongClick) {
-                    Toast.makeText(context, " " + dataFunctions.get(position).getMfunctionName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, " " + dataFunctions.get(position).getMfunctionName() + "" + dataFunctions.get(position).getMfunctionImage(), Toast.LENGTH_SHORT).show();
                 } else {
                     switch (dataFunctions.get(position).getMfunctionImage()) {
                         case 2131099756: //id hình ảnh chức năng TKB
