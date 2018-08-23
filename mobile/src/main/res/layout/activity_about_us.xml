@@ -17,7 +17,7 @@
             android:layout_height="120dp"
             android:layout_gravity="center_horizontal"
             android:padding="16dp"
-            android:src="@drawable/img_logo_hsu" />
+            android:src="@drawable/img_logo_hsu_white" />
     </LinearLayout>
 
     <View
